@@ -16,22 +16,35 @@
 
 ### gitのインストール
 
-Windows
+#### Windows
 [git公式](https://git-for-windows.github.io/ "git")
 
-Mac
+#### Mac
 xcodeがあるなら入ってます。
 
 ***
 ## 使い方
 ***
 
-作業したいフォルダを作成して、そのフォルダへターミナルで移動してください。
-(Windowsの人は)
+### 環境のダウンロード
 
-例)
+ターミナルで以下のコマンドを実行してください。
+(Windowsの人はコマンドプロンプトで実行してください。)
+
+例)デスクトップで作業する場合
 
 ```
+cd /Users/user/Desktop
+git clone git@github.com:inhouseuse/frontend_dev.git
+cd frontend_dev
+```
 
+以上でGithubからダウンロードが完了です。(ダウンロードにしばらく時間がかかります。)
+
+### Package.jsonに従って、puluginをインストールします。
 
 ```
+npm install
+```
+
+以上で完了です。
