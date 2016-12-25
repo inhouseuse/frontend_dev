@@ -1,0 +1,22 @@
+/*
+csscombはcssのフォーマットをキレイにしてくれるnodeパッケージ
+特にソート順を自分で決定できるところが便利
+適当になりがちなプロパティの順序をキレイにしてくれる
+使い方
+
+①コマンドラインで npm install csscomb -g
+②プロジェクトのルートフォルダに.csscomb.jsonを配置
+③コマンドラインでcsscomb パス/ファイル名 を実行
+
+gulpでcsscombもあるので、自動で整形もできます。
+*/
+
+
+.main {
+    display: none;
+    position: absolute;
+    font-size: 16px;
+    margin-bottom: 18px;
+    border: 1px solid #000000;
+    color: #FFAAFF;
+}
