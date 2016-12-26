@@ -1,3 +1,6 @@
+// https://www.npmjs.com/package/gulp-babel
+// 公式ホームページを確認するとgulp-babel + babel-preset-es2015が必要
+
 class Member {
     constructor(name, age) {
         this.name = name;
@@ -9,6 +12,7 @@ class Member {
     static getMyname() {
         return "static";
     }
+    
 }
 
 console.log(Member.getMyname());

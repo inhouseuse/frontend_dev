@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/inhouseuse/frontend_dev#readme",
   "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-preset-es2015": "^6.18.0",
     "csscomb": "^3.1.7",
     "eslint": "^3.12.2",
     "gulp": "^3.9.1",

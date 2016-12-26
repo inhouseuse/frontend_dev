@@ -12,15 +12,18 @@ gulp.task("pug", () => {
         .pipe(gulp.dest("./pug/"));
 });
 
-gulp.task("babel", function() {
-    gulp.src("./es6/src/**/*.js")
-        .pipe(babel())
-        .pipe(gulp.dest("./es6/lib"));
+gulp.task("babel", function () {
+    return gulp.src("es6/src/*.js")
+        .pipe(babel({
+            presets: ["es2015"]
+        }))
+        .pipe(gulp.dest("es6/lib"));
 });
 
 
 gulp.task("watch",function(){
     gulp.watch("./pug/**/*.pug",["pug"]);
+    gulp.watch("./es6/**/*.js",["babel"]);
 });
 
 gulp.task("default",["watch"]);
