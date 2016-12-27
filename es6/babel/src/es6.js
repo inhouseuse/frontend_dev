@@ -10,18 +10,18 @@ class Member {
         return `My name is ${ this.name }. I'm ${ this.age } year's old.`;
     }
     static getMyname() {
-        return "static";
+        return 'static';
     }
     
 }
 
 console.log(Member.getMyname());
 
-let m = new Member("Atom", 24);
+let m = new Member('Atom', 24);
 
 console.log(m.getInfo());
 
-m.name = "vscode";
+m.name = 'vscode';
 
 
 console.log(m.name);

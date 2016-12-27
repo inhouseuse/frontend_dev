@@ -1,0 +1,86 @@
+// Sass
+// 公式サイト http://sass-lang.com/
+// 日本語の学習サイト http://book.scss.jp/code/c2/04.html
+
+// @import
+// ファイルを目的にあわせて分割し、importが可能
+// インポートされるファイルは"_"をつける
+
+@import 'reset';
+
+
+// 変数
+// 目的に合わせて変数の名前をつけることで、cssの保守性をあげる。
+$font-static: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+
+$info-color: #5bc0de;
+$alert-color: #337ab7;
+$warning-color: #f0ad4e;
+
+$susccess-color: #5cb85c;
+$error-color: #d9534f;
+
+$base-fontsize: 18px;
+$base-lineheight: 1.5em;
+
+
+body {
+    font-family: $font-static;
+}
+
+.btn-group {
+    display: flex;
+}
+
+.btn {
+    border: 2px solid #000;
+    border-radius: 4px;
+    margin: 2px;
+    text-align: center;
+    width: 100px;
+    height: 28px;
+    font-size: $base-fontsize;
+    line-height: $base-lineheight;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.5;
+}
+
+.btn-info {
+    background-color: $info-color;
+    border-color: $info-color * 1.2 ;
+    color: #ffffff;
+}
+
+.btn-alert {
+    background-color: $alert-color;
+    border-color: $alert-color * 1.2 ;
+    color: #ffffff;
+}
+
+.btn-warning {
+    background-color: $warning-color;
+    border-color: $warning-color * 1.2 ;
+    color: #ffffff;
+}
+
+// ネスト
+// 階層を深くすることで、スタイルの当たる箇所を限定的にする
+// 深くしすぎるとコードの可読性が低くなるので、最低３階層くらいがベター
+nav.navigation {
+    background-color: #fff;
+    ul {
+        font-size: 12px;
+    }
+    li {
+        display: inline-block;
+        a {
+            text-decoration: none;
+        }
+    }
+    
+}
+
+
