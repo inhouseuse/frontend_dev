@@ -6,8 +6,8 @@
 // ファイルを目的にあわせて分割し、importが可能
 // インポートされるファイルは"_"をつける
 
-@import 'reset';
-
+@import 'common/reset';
+// @import 'common/variables';
 
 // 変数
 // 目的に合わせて変数の名前をつけることで、cssの保守性をあげる。
@@ -78,9 +78,46 @@ nav.navigation {
         display: inline-block;
         a {
             text-decoration: none;
+            // height:1px;
         }
-    }
-    
+    }    
 }
 
+// mixin
+// 共通化できる定義を作り事前に定義することであとからincludeができる
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box-black {
+    @include border-radius(5px);
+    border-color: #000000;
+}
+.box-red {
+    @include border-radius(10px);
+    border-color: #ff0000;
+}
+
+// 例)
+@mixin linkcolor($color) {
+    color: $color;
+    &:hover, &:active, &:focus {
+        // lightenはSass組み込みのmixin 第一引数の色を20%明るくする
+        color: lighten($color, 20%);        
+    }
+}
+
+a.list-red {
+    @include linkcolor(#ff0000);
+    text-decoration: none;
+}
+
+a.list-black {
+    @include linkcolor(#000000);
+    text-decoration: none;
+}
 

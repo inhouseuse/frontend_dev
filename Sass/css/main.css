@@ -64,3 +64,37 @@ nav.navigation li {
 nav.navigation li a {
   text-decoration: none;
 }
+
+.box-black {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  border-color: #000000;
+}
+
+.box-red {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  border-color: #ff0000;
+}
+
+a.list-red {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+a.list-red:hover, a.list-red:active, a.list-red:focus {
+  color: #ff6666;
+}
+
+a.list-black {
+  color: #000000;
+  text-decoration: none;
+}
+
+a.list-black:hover, a.list-black:active, a.list-black:focus {
+  color: #333333;
+}
