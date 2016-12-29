@@ -9,6 +9,8 @@ var source     = require('vinyl-source-stream');
 var ts = require('gulp-typescript');
 var tsProject = ts.createProject('tsconfig.json');
 var sass = require('gulp-sass');
+var browserSync = require('browser-sync').create();
+var reload = browserSync.reload;
 
 
 gulp.task('pug', () => {
@@ -48,10 +50,19 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('./Sass/css'));
 });
 
+// Static server
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: './Browser-sync'
+        }
+    });
+    gulp.watch('./Browser-sync/*.html').on('change', reload);
+});
 
 gulp.task('watch',function(){
-    gulp.watch('./pug/**/*.pug',['pug']);
-    gulp.watch('./sass/scss/*.scss',['sass']);
+    // gulp.watch('./pug/**/*.pug',['pug']);
+    // gulp.watch('./sass/scss/*.scss',['sass']);
     // gulp.watch('./es6/**/*.js',['babel']);
 });
 
